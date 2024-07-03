@@ -3,7 +3,7 @@ form.addEventListener("submit",async(e)=>{
     e.preventDefault()
     let place=document.getElementById("location").value
     console.log(place);
-    let key = "4368eebeb10ad8d313984a665b50ca0f";
+    let key = "your weather api key"
     let api=`https://api.openweathermap.org/data/2.5/weather?q=${place}&appid=${key}`
     let data=await fetch(api);//this gives promise so using await
     let finaldata=await data.json();//this also gives promise so using await
